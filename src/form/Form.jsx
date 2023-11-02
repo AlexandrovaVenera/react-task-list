@@ -1,5 +1,8 @@
-import React from 'react';
-import './Form.css';
+import React from "react";
+import "./Form.css";
+import Menu from "./menu/Menu";
+import NewTaskInput from "./add-new-task/NewTaskInput";
+import TaskList from "./task-list/TaskList";
 
 function Form() {
   return (
@@ -17,124 +20,14 @@ function Form() {
                   />
                   <h2 className="my-4 text-white">Task List</h2>
                 </div>
-                <form className="d-flex justify-content-center align-items-center">
-                  <div className="input-group mb-3">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="New task..."
-                      aria-label="task"
-                      aria-describedby="button-addon2"
-                    />
-                    <button
-                      className="btn btn-outline-secondary"
-                      type="button"
-                      id="button-addon2"
-                    >
-                      Add
-                    </button>
-                  </div>
-                </form>
+                <NewTaskInput />
                 <div className="card text-center">
-                  <div className="card-header">
-                    <ul className="nav nav-tabs card-header-tabs">
-                      <li className="nav-item">
-                        <a
-                          className="nav-link active"
-                          aria-current="true"
-                          href="#"
-                        >
-                          All
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          href="#"
-                        >
-                          Active
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          href="#"
-                          tabindex="-1"
-                          aria-disabled="true"
-                        >
-                          Completed
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <Menu />
                   <div
                     className="card-body"
-                    style={{ backgroundColor: '#fff' }}
+                    style={{ backgroundColor: "#fff" }}
                   >
-                    <ul className="list-group mb-0">
-                      <li
-                        className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                        style={{ backgroundColor: '#f4f6f7' }}
-                      >
-                        <input
-                          className="form-check-input me-2"
-                          type="checkbox"
-                          value=""
-                          aria-label="..."
-                          checked
-                        />
-                        <s>Cras justo odio</s>
-                      </li>
-                      <li
-                        className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                        style={{ backgroundColor: '#f4f6f7' }}
-                      >
-                        <input
-                          className="form-check-input me-2"
-                          type="checkbox"
-                          value=""
-                          aria-label="..."
-                          checked
-                        />
-                        <s>Dapibus ac facilisis in</s>
-                      </li>
-                      <li
-                        className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                        style={{ backgroundColor: '#f4f6f7' }}
-                      >
-                        <input
-                          className="form-check-input me-2"
-                          type="checkbox"
-                          value=""
-                          aria-label="..."
-                        />
-                        Morbi leo risus
-                      </li>
-                      <li
-                        className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                        style={{ backgroundColor: '#f4f6f7' }}
-                      >
-                        <input
-                          className="form-check-input me-2"
-                          type="checkbox"
-                          value=""
-                          aria-label="..."
-                        />
-                        Porta ac consectetur ac
-                      </li>
-                      <li
-                        className="list-group-item d-flex align-items-center border-0 mb-0 rounded"
-                        style={{ backgroundColor: '#f4f6f7' }}
-                      >
-                        <input
-                          className="form-check-input me-2"
-                          type="checkbox"
-                          value=""
-                          aria-label="..."
-                        />
-                        Vestibulum at eros
-                      </li>
-                    </ul>
+                    <TaskList />
                   </div>
                 </div>
               </div>
