@@ -1,0 +1,31 @@
+.mask-custom {
+  background: rgba(24, 24, 16, 0.2);
+  backdrop-filter: blur(25px);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+.card {
+  background: none !important;
+}
+.btn-outline-secondary {
+  background: #198754;
+  color: #fff;
+  border-color: #198754;
+}
+
+.active {
+  border-bottom: #198754 solid transparent;
+}
+.form-control,
+.btn-outline-success {
+  padding: 0.1rem 0.75rem;
+}
+
+.nav-link {
+  color: #ced4da;
+}
+
+.form-check-input:checked {
+  background-color: #198754;
+  border-color: #198754;
+}
