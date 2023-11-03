@@ -1,18 +1,23 @@
-import React from "react";
-import TaskItem from "./task-item/TaskItem";
+import React, { useState } from 'react';
+import TaskItem from './task-item/TaskItem';
 
-function TaskList() {
-  const data = [
-    { text: "Cras justo odio", checked: true },
-    { text: "Dapibus ac facilisis in", checked: true },
-    { text: "Morbi leo risus", checked: false },
-    { text: "Porta ac consectetur ac", checked: false },
-  ];
+function TaskList({ data }) {
+  const [items, setData] = useState(data);
+
+  setData;
   return (
     <ul className="list-group mb-0">
-      {data.map((item, i) => {
-        return <TaskItem key={i} {...item} />;
-      })}
+      {items
+        .sort((a, b) => a.id - b.id)
+        .map((item, i) => {
+          return (
+            <TaskItem
+              key={item.id}
+              {...item}
+              onDelete={() => console.log(item.id)}
+            />
+          );
+        })}
     </ul>
   );
 }
